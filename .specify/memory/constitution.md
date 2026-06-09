@@ -1,50 +1,58 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report
+Version change: 0.0.0 → 1.0.0 (initial ratification)
+Added sections: Core Principles, Technical Rules, UX Rules, AI/Automation Rules, Governance
+Modified principles: N/A (initial version)
+Templates requiring updates: ✅ constitution.md written
+Follow-up TODOs: None — all placeholders resolved
+-->
+
+# Ahmed El-Nahhas Portfolio Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Purpose-Driven Simplicity
+The portfolio exists to clearly showcase projects, skills, and experience to potential clients and collaborators. Every design and code decision must serve this goal. Features or UI elements that do not directly support that purpose MUST be removed or deferred.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Minimal & Fast UI
+The interface MUST remain clean, focused, and performant. Visual noise, excessive animations, and decorative elements that hurt readability or load time are prohibited. Page load time MUST target under 2 seconds on a standard connection.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Mobile-First Design
+All layouts and components MUST be designed for mobile viewports first, then progressively enhanced for tablet and desktop. No feature is considered complete until it is verified on small screens.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Modularity & Reusability
+Code MUST be organized into self-contained, reusable components. Logic shared across features belongs in `/shared`. No feature should reach into another feature's internals. The folder structure in `ARCHITECTURE.md` is the canonical reference.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. No Unnecessary Complexity
+YAGNI (You Aren't Gonna Need It) applies strictly. Third-party libraries, abstractions, and patterns MUST be justified by a concrete current need. Adding complexity for hypothetical future requirements is not permitted.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Technical Rules
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- Use modern JavaScript (ES6+) and TypeScript throughout.
+- Prefer component-based architecture (Next.js App Router, React functional components).
+- Maintain the feature-based folder structure defined in `ARCHITECTURE.md`.
+- Path aliases (`@/`, `@/features/*`, `@/shared/*`) MUST be used — no relative `../../` imports.
+- All components default to Server Components unless interactivity explicitly requires `"use client"`.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## UX Rules
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Navigation MUST be clear and accessible at all scroll positions.
+- No interface clutter — each section serves one clear purpose.
+- Animations MUST be subtle and purposeful; they MUST NOT block content rendering.
+- Color, typography, and spacing MUST follow the design tokens in `tailwind.config.ts`.
+
+## AI / Automation Rules
+
+- AI-generated code suggestions MUST be reviewed by the developer before being applied to the codebase.
+- AI MUST NOT override manual architectural decisions or undo intentional design choices.
+- Generated code MUST conform to the principles above; non-conforming output MUST be revised or rejected.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes informal conventions and undocumented preferences. Any amendment requires:
+1. A clear rationale documenting why the change is needed.
+2. A version bump following semantic versioning (MAJOR for removals/redefinitions, MINOR for additions, PATCH for clarifications).
+3. A review of affected templates and documentation files to keep them in sync.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+All pull requests and code reviews MUST verify compliance with the principles above. Complexity introduced in violation of Principle V requires explicit written justification in the PR description.
+
+**Version**: 1.0.0 | **Ratified**: 2026-06-10 | **Last Amended**: 2026-06-10
