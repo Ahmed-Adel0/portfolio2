@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=DM+Mono:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-text font-cairo text-base leading-relaxed overflow-x-hidden;
+  background-color: #080809;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080809;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 51, 56, 0.6);
+  border-radius: 99px;
+}
+
+a {
+  @apply no-underline;
+}
+
+/* ─── Reveal Animations ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px) scale(0.97);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal-delay-1 { transition-delay: 120ms; }
+.reveal-delay-2 { transition-delay: 240ms; }
+.reveal-delay-3 { transition-delay: 360ms; }
+
+/* ─── Glassmorphism helpers ─── */
+.glass {
+  background: rgba(15, 15, 17, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(34, 34, 38, 0.5);
+}
+
+/* ─── Noise texture overlay ─── */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+}
+
+/* ─── Custom selection color ─── */
+::selection {
+  background: rgba(26, 110, 255, 0.25);
+  color: #efefed;
+}
+
+/* ─── Blue glow pulse keyframe ─── */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(26,110,255,0.6); }
+  50%       { box-shadow: 0 0 16px rgba(26,110,255,1); }
+}
+
+.glow-dot {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* ─── Floating animation for hero rings ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
