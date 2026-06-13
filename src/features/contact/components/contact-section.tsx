@@ -1,8 +1,4 @@
-import {
-  CONTACT_EMAIL,
-  PHONE,
-  LINKEDIN,
-} from "@/shared/constants/nav.constant";
+import { personal } from "@/data/personal";
 
 export function ContactSection() {
   return (
@@ -40,7 +36,7 @@ export function ContactSection() {
         {/* Contact Links */}
         <div className="reveal reveal-delay-3 flex gap-4 justify-center flex-wrap">
           <a
-            href={`mailto:${CONTACT_EMAIL}`}
+            href={`mailto:${personal.email}`}
             className="group bg-bg-2/60 backdrop-blur-md border border-border/50 px-6 py-4 text-text text-sm
               inline-flex items-center gap-3 rounded-2xl hover:border-blue/60 hover:bg-blue/5
               hover:text-blue-light hover:shadow-[0_0_25px_rgba(26,110,255,0.12)] transition-all duration-300"
@@ -55,11 +51,11 @@ export function ContactSection() {
               <rect x="3" y="5" width="18" height="14" rx="2" />
               <path d="M3 7l9 6 9-6" />
             </svg>
-            {CONTACT_EMAIL}
+            {personal.email}
           </a>
 
           <a
-            href={LINKEDIN}
+            href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-bg-2/60 backdrop-blur-md border border-border/50 px-6 py-4 text-text text-sm
@@ -80,7 +76,7 @@ export function ContactSection() {
           </a>
 
           <a
-            href={`tel:${PHONE}`}
+            href={`tel:${personal.phone}`}
             className="group bg-bg-2/60 backdrop-blur-md border border-border/50 px-6 py-4 text-text text-sm
               inline-flex items-center gap-3 rounded-2xl hover:border-blue/60 hover:bg-blue/5
               hover:text-blue-light hover:shadow-[0_0_25px_rgba(26,110,255,0.12)] transition-all duration-300"

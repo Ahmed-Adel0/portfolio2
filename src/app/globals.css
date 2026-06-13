@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=DM+Mono:wght@300;400;500&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +7,7 @@
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -18,7 +16,7 @@ html {
 
 body {
   @apply bg-bg text-text font-cairo text-base leading-relaxed overflow-x-hidden;
-  background-color: #080809;
+  background-color: #F9F9F7;
 }
 
 ::-webkit-scrollbar {
@@ -26,11 +24,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #080809;
+  background: #F9F9F7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(51, 51, 56, 0.6);
+  background: rgba(156, 163, 175, 0.6);
   border-radius: 99px;
 }
 
@@ -57,10 +55,10 @@ a {
 
 /* ─── Glassmorphism helpers ─── */
 .glass {
-  background: rgba(15, 15, 17, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(34, 34, 38, 0.5);
+  border: 1px solid rgba(229, 231, 235, 0.5);
 }
 
 /* ─── Noise texture overlay ─── */
@@ -70,14 +68,14 @@ a {
   inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events: none;
-  opacity: 0.04;
+  opacity: 0.02;
   mix-blend-mode: overlay;
 }
 
 /* ─── Custom selection color ─── */
 ::selection {
-  background: rgba(26, 110, 255, 0.25);
-  color: #efefed;
+  background: rgba(26, 110, 255, 0.12);
+  color: #0D0D0D;
 }
 
 /* ─── Blue glow pulse keyframe ─── */

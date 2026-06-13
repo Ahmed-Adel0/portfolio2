@@ -1,18 +1,51 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { site } from "@/data/site";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "أحمد النحاس — مهندس برمجيات ومحلل أنظمة",
-  description: "أحول متطلبات الأعمال إلى أنظمة ومنتجات رقمية قابلة للنمو",
-  keywords: [
-    "مهندس برمجيات",
-    "محلل أنظمة",
-    "Next.js",
-    "البرمجة",
-    "تطوير الويب",
+const pingAr = localFont({
+  src: [
+    {
+      path: "../../Ping.Font.Tlwen.com/PingAR+LT-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../Ping.Font.Tlwen.com/PingAR+LT-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../Ping.Font.Tlwen.com/PingAR+LT-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../Ping.Font.Tlwen.com/PingAR+LT-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../Ping.Font.Tlwen.com/PingAR+LT-Heavy.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../../Ping.Font.Tlwen.com/PingAR+LT-Black.otf",
+      weight: "900",
+      style: "normal",
+    },
   ],
-  authors: [{ name: "أحمد النحاس" }],
-  robots: "index, follow",
+  variable: "--font-ping-ar",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: site.title,
+  description: site.description,
+  keywords: site.keywords,
+  authors: [{ name: site.author }],
+  robots: site.robots,
 };
 
 export const viewport = {
@@ -27,18 +60,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=DM+Mono:wght@300;400;500&display=swap"
-          rel="preload"
-          as="style"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=DM+Mono:wght@300;400;500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="bg-bg text-text font-cairo">{children}</body>
+      <body className={`${pingAr.variable} bg-bg text-text font-cairo`}>
+        {children}
+      </body>
     </html>
   );
 }

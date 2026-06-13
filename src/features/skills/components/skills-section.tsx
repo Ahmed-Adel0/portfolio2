@@ -1,55 +1,5 @@
+import { skillGroups } from "@/data/skills";
 import { SectionHeader } from "@/shared/components/section-header";
-
-const SKILL_GROUPS = [
-  {
-    label: "Software Engineering",
-    delay: "reveal-delay-1",
-    skills: [
-      { name: "Next.js", core: true },
-      { name: "PHP / Laravel", core: true },
-      { name: "JavaScript" },
-      { name: "TypeScript" },
-      { name: "Supabase" },
-      { name: "MySQL" },
-      { name: "REST APIs" },
-      { name: "Git / GitHub" },
-    ],
-  },
-  {
-    label: "System Analysis",
-    delay: "reveal-delay-2",
-    skills: [
-      { name: "Requirements Analysis", core: true },
-      { name: "Process Modeling", core: true },
-      { name: "SDLC" },
-      { name: "Technical Documentation" },
-      { name: "System Design" },
-      { name: "Solution Architecture" },
-    ],
-  },
-  {
-    label: "Project Delivery",
-    delay: "reveal-delay-1",
-    skills: [
-      { name: "Tech Leadership", core: true },
-      { name: "Task Management" },
-      { name: "Stakeholder Comms" },
-      { name: "Project Coordination" },
-      { name: "Agile / Scrum" },
-    ],
-  },
-  {
-    label: "Data Science Journey",
-    delay: "reveal-delay-2",
-    skills: [
-      { name: "Python" },
-      { name: "Statistics" },
-      { name: "Data Analysis" },
-      { name: "Mathematics" },
-      { name: "CS Fundamentals" },
-    ],
-  },
-];
 
 export function SkillsSection() {
   return (
@@ -64,10 +14,10 @@ export function SkillsSection() {
         <SectionHeader num="005" title="المهارات" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {SKILL_GROUPS.map((group) => (
+          {skillGroups.map((group, index) => (
             <div
               key={group.label}
-              className={`reveal ${group.delay} bg-bg-2/40 backdrop-blur-md border border-border/40 p-8 rounded-3xl hover:bg-bg-3/60 hover:border-blue/30 transition-all duration-300 hover:shadow-[0_10px_30px_-15px_rgba(26,110,255,0.1)] group`}
+              className={`reveal reveal-delay-${(index % 2) + 1} bg-bg-2/40 backdrop-blur-md border border-border/40 p-8 rounded-3xl hover:bg-bg-3/60 hover:border-blue/30 transition-all duration-300 hover:shadow-[0_10px_30px_-15px_rgba(26,110,255,0.1)] group`}
             >
               <div
                 className="font-mono text-xs text-blue tracking-[2px] uppercase mb-6 flex items-center gap-4"

@@ -55,4 +55,15 @@ This constitution supersedes informal conventions and undocumented preferences. 
 
 All pull requests and code reviews MUST verify compliance with the principles above. Complexity introduced in violation of Principle V requires explicit written justification in the PR description.
 
+## Rules (Constitution Additions)
+ 
+The following rules extend the project constitution for the data layer:
+ 
+1. **No inline data** — Arrays or objects representing content MUST NOT be defined inside component files.
+2. **`src/data/` is the single source of truth** — All editable content lives here and nowhere else.
+3. **Data files are pure TS** — No JSX, no imports from React or Next.js, no side effects.
+4. **Types travel with data** — Each data file exports its own TypeScript types. Components consume those types; they do not redefine them.
+5. **`src/shared/constants/` is deprecated** — All constants that are content (not utility values) MUST move to `src/data/`.
+---
+
 **Version**: 1.0.0 | **Ratified**: 2026-06-10 | **Last Amended**: 2026-06-10
