@@ -2,7 +2,7 @@ export function SectionHeader({ num, title }: { num: string; title: string }) {
   return (
     <div className="flex items-center gap-[14px] mb-14 reveal" dir="rtl">
       <div className="flex items-center gap-3">
-        <span className="w-2 h-2 rounded-full bg-blue shadow-[0_0_10px_rgba(26,110,255,0.8)] animate-pulse"></span>
+        <span className="w-2 h-2 rounded-full bg-blue shadow-[0_0_10px_rgba(28,77,141,0.7)] animate-pulse"></span>
         <span className="font-mono text-xs text-blue tracking-widest font-medium">
           {num}
         </span>

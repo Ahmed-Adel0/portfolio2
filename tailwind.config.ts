@@ -11,27 +11,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg:           "#F9F9F7",
+        bg:           "#F4F6FA",
         "bg-2":       "#FFFFFF",
-        "bg-3":       "#F3F4F6",
-        "bg-4":       "#E5E7EB",
-        border:       "#E5E7EB",
-        "border-2":   "#D1D5DB",
-        blue:         "#1A6EFF",
-        "blue-dark":  "#0F4FCC",
-        "blue-light": "#3B82F6",
-        "blue-glow":  "rgba(26, 110, 255, 0.04)",
-        "blue-border":"rgba(26, 110, 255, 0.12)",
-        text:         "#0D0D0D",
-        muted:        "#6B7280",
-        "muted-2":    "#9CA3AF",
+        "bg-3":       "#EBF0F8",
+        "bg-4":       "#D6E1F0",
+        border:       "#D6E1F0",
+        "border-2":   "#BDE8F5",
+        /* ── Brand Palette ── */
+        blue:         "#1C4D8D",   /* primary brand blue  */
+        "blue-dark":  "#0F2854",   /* navy — darkest       */
+        "blue-light": "#4988C4",   /* medium accent        */
+        "blue-sky":   "#BDE8F5",   /* lightest tint        */
+        "blue-glow":  "rgba(28, 77, 141, 0.06)",
+        "blue-border":"rgba(28, 77, 141, 0.15)",
+        text:         "#0F2854",   /* navy for headlines   */
+        muted:        "#4B6186",   /* blue-toned muted     */
+        "muted-2":    "#7A93B5",
       },
       fontFamily: {
         cairo: ["var(--font-ping-ar)", "Tahoma", "Arial", "sans-serif"],
         mono:  ["ui-monospace", "SFMono-Regular", "Consolas", "monospace"],
       },
       backgroundImage: {
-        "glow-blue": "radial-gradient(ellipse at center, rgba(26,110,255,0.15) 0%, transparent 70%)",
+        "glow-blue": "radial-gradient(ellipse at center, rgba(28,77,141,0.15) 0%, transparent 70%)",
       },
       keyframes: {
         "spin-slow": {

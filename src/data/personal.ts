@@ -11,6 +11,8 @@ export type PersonalData = {
   email: string;
   phone: string;
   linkedin: string;
+  github: string;
+  facebook: string;
   location: string;
   availableGlobally: boolean;
   stats: Stat[];
@@ -24,6 +26,8 @@ export const personal: PersonalData = {
   email: "ahmed.ibn.adell@gmail.com",
   phone: "01554463626",
   linkedin: "https://linkedin.com/in/ahmedibnadel",
+  github: "https://github.com/Ahmed-Adel0",
+  facebook: "https://facebook.com/ahmed.ibnadel",
   location: "المنصورة، مصر",
   availableGlobally: true,
   stats: [

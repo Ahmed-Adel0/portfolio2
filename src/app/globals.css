@@ -16,7 +16,7 @@ html {
 
 body {
   @apply bg-bg text-text font-cairo text-base leading-relaxed overflow-x-hidden;
-  background-color: #F9F9F7;
+  background-color: #F4F6FA;
 }
 
 ::-webkit-scrollbar {
@@ -24,11 +24,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F9F9F7;
+  background: #F4F6FA;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.6);
+  background: rgba(73, 136, 196, 0.5);
   border-radius: 99px;
 }
 
@@ -74,14 +74,14 @@ a {
 
 /* ─── Custom selection color ─── */
 ::selection {
-  background: rgba(26, 110, 255, 0.12);
-  color: #0D0D0D;
+  background: rgba(28, 77, 141, 0.15);
+  color: #0F2854;
 }
 
 /* ─── Blue glow pulse keyframe ─── */
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 6px rgba(26,110,255,0.6); }
-  50%       { box-shadow: 0 0 16px rgba(26,110,255,1); }
+  0%, 100% { box-shadow: 0 0 6px rgba(28,77,141,0.5); }
+  50%       { box-shadow: 0 0 16px rgba(73,136,196,0.9); }
 }
 
 .glow-dot {

@@ -51,11 +51,14 @@ export function HowItWorksSection() {
             href={howItWorksData.cta.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative bg-blue text-white px-8 py-4 font-cairo text-sm font-bold
-              inline-flex items-center gap-3 rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_4px_25px_rgba(26,110,255,0.3)]"
+            className="group relative text-white px-8 py-4 font-cairo text-sm font-bold
+              inline-flex items-center gap-3 rounded-full overflow-hidden transition-all
+              hover:scale-105 hover:shadow-[0_6px_28px_rgba(15,40,84,0.35)]"
+            style={{ background: "linear-gradient(135deg, #1C4D8D 0%, #0F2854 100%)" }}
           >
             <span className="relative z-10">{howItWorksData.cta.label} ←</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue to-blue-dark opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
+              style={{ background: "linear-gradient(135deg, #4988C4 0%, #1C4D8D 100%)" }} />
           </a>
         </div>
       </div>

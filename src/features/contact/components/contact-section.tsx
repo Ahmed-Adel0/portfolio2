@@ -23,7 +23,8 @@ export function ContactSection() {
         <h2 className="reveal reveal-delay-1 text-5xl md:text-6xl lg:text-7xl font-black leading-[1.0] tracking-[-3px] mb-6">
           عندك فكرة؟
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue to-blue-light">
+          <span className="text-transparent bg-clip-text"
+            style={{ backgroundImage: "linear-gradient(135deg, #1C4D8D, #4988C4)" }}>
             تواصل معي.
           </span>
         </h2>
@@ -39,7 +40,7 @@ export function ContactSection() {
             href={`mailto:${personal.email}`}
             className="group bg-bg-2/60 backdrop-blur-md border border-border/50 px-6 py-4 text-text text-sm
               inline-flex items-center gap-3 rounded-2xl hover:border-blue/60 hover:bg-blue/5
-              hover:text-blue-light hover:shadow-[0_0_25px_rgba(26,110,255,0.12)] transition-all duration-300"
+              hover:text-blue-light hover:shadow-[0_0_25px_rgba(28,77,141,0.15)] transition-all duration-300"
           >
             <svg
               viewBox="0 0 24 24"
@@ -60,7 +61,7 @@ export function ContactSection() {
             rel="noopener noreferrer"
             className="group bg-bg-2/60 backdrop-blur-md border border-border/50 px-6 py-4 text-text text-sm
               inline-flex items-center gap-3 rounded-2xl hover:border-blue/60 hover:bg-blue/5
-              hover:text-blue-light hover:shadow-[0_0_25px_rgba(26,110,255,0.12)] transition-all duration-300"
+              hover:text-blue-light hover:shadow-[0_0_25px_rgba(28,77,141,0.15)] transition-all duration-300"
           >
             <svg
               viewBox="0 0 24 24"
@@ -79,7 +80,7 @@ export function ContactSection() {
             href={`tel:${personal.phone}`}
             className="group bg-bg-2/60 backdrop-blur-md border border-border/50 px-6 py-4 text-text text-sm
               inline-flex items-center gap-3 rounded-2xl hover:border-blue/60 hover:bg-blue/5
-              hover:text-blue-light hover:shadow-[0_0_25px_rgba(26,110,255,0.12)] transition-all duration-300"
+              hover:text-blue-light hover:shadow-[0_0_25px_rgba(28,77,141,0.15)] transition-all duration-300"
           >
             <svg
               viewBox="0 0 24 24"

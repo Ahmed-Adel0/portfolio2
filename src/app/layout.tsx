@@ -46,6 +46,11 @@ export const metadata: Metadata = {
   keywords: site.keywords,
   authors: [{ name: site.author }],
   robots: site.robots,
+  icons: {
+    icon: "/assets/icons/icon.png",
+    shortcut: "/assets/icons/icon.png",
+    apple: "/assets/icons/icon.png",
+  },
 };
 
 export const viewport = {
