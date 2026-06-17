@@ -63,9 +63,9 @@ export function Navigation() {
         <Image
   src="/assets/images/nav-Logo.png"
   alt="Logo"
-  width={200}
-  height={200}
-  className="rounded-full w-10 h-10 md:w-12 md:h-12 object-contain"
+  width={120}
+  height={120}
+  className="rounded-full w-15 h-15 md:w-12 md:h-12 object-contain"
 />
 
         {/* Desktop Nav Links */}

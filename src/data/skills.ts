@@ -10,38 +10,45 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
-    label: "Software Engineering",    skills: [
+    label: "هندسة البرمجيات وبناء الأنظمة",
+    skills: [
       { name: "Next.js", core: true },
       { name: "PHP / Laravel", core: true },
-      { name: "JavaScript" },
       { name: "TypeScript" },
+      { name: "JavaScript" },
       { name: "Supabase" },
       { name: "MySQL" },
       { name: "REST APIs" },
       { name: "Git / GitHub" },
     ],
   },
+
   {
-    label: "System Analysis",    skills: [
-      { name: "Requirements Analysis", core: true },
-      { name: "Process Modeling", core: true },
+    label: "تحليل الأنظمة وتصميم الحلول",
+    skills: [
+      { name: "تحليل المتطلبات", core: true },
+      { name: "نمذجة العمليات", core: true },
       { name: "SDLC" },
-      { name: "Technical Documentation" },
+      { name: "توثيق الأنظمة" },
       { name: "System Design" },
       { name: "Solution Architecture" },
     ],
   },
+
   {
-    label: "Project Delivery",    skills: [
+    label: "قيادة تنفيذ المشاريع التقنية",
+    skills: [
       { name: "Tech Leadership", core: true },
-      { name: "Task Management" },
-      { name: "Stakeholder Comms" },
-      { name: "Project Coordination" },
+      { name: "إدارة المهام" },
+      { name: "التواصل مع أصحاب المصلحة" },
+      { name: "تنسيق المشاريع" },
       { name: "Agile / Scrum" },
     ],
   },
+
   {
-    label: "Data Science Journey",    skills: [
+    label: "رحلة علوم البيانات",
+    skills: [
       { name: "Python" },
       { name: "Statistics" },
       { name: "Data Analysis" },

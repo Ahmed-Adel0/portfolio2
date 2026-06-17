@@ -4,10 +4,11 @@ export type NavLink = {
 };
 
 export const navLinks: NavLink[] = [
+  { label: "الرؤية", href: "#hero" },
   { label: "لماذا أنا", href: "#why-me" },
   { label: "الخدمات", href: "#services" },
-  { label: "المقارنة", href: "#comparison" },
   { label: "المشاريع", href: "#projects" },
   { label: "كيف نعمل", href: "#how-it-works" },
+  { label: "النتائج", href: "#comparison" },
   { label: "الأسئلة الشائعة", href: "#faq" }
 ];

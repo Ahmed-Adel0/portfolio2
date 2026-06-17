@@ -72,16 +72,6 @@ export function ServicesSection() {
               <p className="text-xs sm:text-sm text-muted leading-relaxed mb-6 flex-1">
                 {service.description}
               </p>
-              <div className="flex flex-wrap gap-2 pt-2">
-                {service.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="bg-bg-3 border border-border/90 text-muted font-mono text-[9px] sm:text-[10px] px-3 py-1 rounded-full tracking-[0.5px] transition-colors group-hover:border-blue/20 group-hover:text-blue"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </div>
           ))}
         </div>

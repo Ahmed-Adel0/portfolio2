@@ -113,7 +113,6 @@ export function ComparisonSection() {
             {comparisonData.quote.text}
           </p>
           <cite className="not-italic text-[10px] sm:text-xs font-bold text-blue">
-            — {comparisonData.quote.author}
           </cite>
         </div>
       </div>

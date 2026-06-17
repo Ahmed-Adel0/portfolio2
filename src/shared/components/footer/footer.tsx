@@ -137,7 +137,7 @@ export function Footer() {
         style={{ borderColor: "rgba(189,232,245,0.10)" }}
       >
         <p className="font-cairo text-xs" style={{ color: "rgba(189,232,245,0.5)" }}>
-          © 2026 جميع الحقوق محفوظة — النحاس جروب
+          © 2026 جميع الحقوق محفوظة — Eng. Ahmed El-Nahhas
         </p>
         <div className="flex items-center gap-2">
           <span

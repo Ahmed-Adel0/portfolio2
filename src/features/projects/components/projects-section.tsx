@@ -1,38 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { projectsData } from "@/data/projects";
 import { SectionHeader } from "@/shared/components/section-header";
 
 export function ProjectsSection() {
   const [showAll, setShowAll] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const displayedProjects = showAll ? projectsData : projectsData.slice(0, 4);
 
-  const getStatusBadge = (status: string) => {
-    switch (status) {
-      case "Live":
-        return (
-          <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
-            جاهز للاستخدام (Live)
-          </span>
-        );
-      case "In Development":
-        return (
-          <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">
-            قيد التطوير (Building)
-          </span>
-        );
-      case "Validation":
-        return (
-          <span className="px-3 py-1 rounded-full text-[10px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
-            تحت الدراسة (Validation)
-          </span>
-        );
-      default:
-        return null;
-    }
-  };
+  useEffect(() => {
+    const els = gridRef.current?.querySelectorAll(".reveal");
+    els?.forEach((el) => el.classList.add("visible"));
+  }, [showAll]);
 
   return (
     <section
@@ -47,19 +28,13 @@ export function ProjectsSection() {
         </p>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {displayedProjects.map((project, index) => (
             <div
               key={project.id}
               className={`reveal reveal-delay-${(index % 2) + 1} group bg-bg border border-border/80 rounded-3xl p-8 flex flex-col justify-between hover:border-blue/30 transition-all duration-300 shadow-sm`}
             >
               <div>
-                <div className="flex justify-between items-center gap-4 mb-6">
-                  <span className="font-mono text-xs font-bold text-blue tracking-[1px]">
-                    {project.code}
-                  </span>
-                  {getStatusBadge(project.status)}
-                </div>
 
                 <h3 className="text-lg sm:text-xl font-bold mb-4 text-text group-hover:text-blue transition-colors">
                   {project.name}
@@ -71,17 +46,6 @@ export function ProjectsSection() {
               </div>
 
               <div>
-                {/* Tech tags */}
-                <div className="flex flex-wrap gap-1.5 pt-2 mb-4">
-                  {project.techs.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-bg-3 border border-border/90 text-muted font-mono text-[9px] sm:text-[10px] px-3 py-1 rounded-full transition-colors group-hover:border-blue/20"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
 
                 {/* Conditional View Project Link */}
                 {project.link && (
@@ -102,13 +66,18 @@ export function ProjectsSection() {
 
         {/* Toggle Show All Button */}
         {projectsData.length > 4 && (
-          <div className="reveal mt-12 text-center">
+          <div className="reveal mt-12 text-center bg-linear-gradient(135deg, #1C4D8D 0%, #0F2854 100%)">
             <button
-              onClick={() => setShowAll(!showAll)}
-              className="bg-bg border border-border/85 hover:border-blue/40 text-text hover:text-blue px-8 py-3.5 text-xs font-bold rounded-full transition-all duration-300"
-            >
-              {showAll ? "عرض مشاريع أقل" : "عرض جميع المشاريع"}
-            </button>
+  onClick={() => setShowAll(!showAll)}
+  className="group relative text-white px-8 py-3.5 font-cairo text-xs font-bold
+    inline-flex items-center gap-3 rounded-full overflow-hidden transition-all
+    hover:scale-105 hover:shadow-[0_6px_28px_rgba(15,40,84,0.35)]"
+  style={{ background: "linear-gradient(135deg, #1C4D8D 0%, #0F2854 100%)" }}
+>
+  <span className="relative z-10">{showAll ? "عرض مشاريع أقل" : "عرض جميع المشاريع"}</span>
+  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
+    style={{ background: "linear-gradient(135deg, #4988C4 0%, #1C4D8D 100%)" }} />
+</button>
           </div>
         )}
       </div>

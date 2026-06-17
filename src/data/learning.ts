@@ -21,19 +21,19 @@ export const learningColumns: LearningColumn[] = [
     items: [
       {
         name: "علوم الحاسب",
-        sub: "الأساسيات العميقة — خوارزميات، هياكل بيانات، نظرية الحوسبة",
-      },
-      {
-        name: "تحليل وتصميم الأنظمة",
-        sub: "System Analysis & Design — SDLC، نمذجة الأنظمة",
-      },
-      {
-        name: "الرياضيات",
-        sub: "الجبر وحساب المثلثات والتفكير الرياضي التحليلي",
+        sub: "بناء أساس قوي في البرمجة، الخوارزميات، هياكل البيانات، وفهم طريقة عمل الأنظمة من الداخل",
       },
       {
         name: "علوم البيانات",
-        sub: "Data Science — Python، إحصاء، تحليل البيانات",
+        sub: "Data Science — الإحصاء، تحليل البيانات، Python، وبناء فهم أعمق للبيانات واتخاذ القرار",
+      },
+      {
+        name: "تحليل وتصميم الأنظمة",
+        sub: "System Analysis & Design — فهم احتياجات الأعمال، نمذجة الأنظمة، وتصميم حلول رقمية فعالة",
+      },
+      {
+        name: "هندسة البرمجيات",
+        sub: "Software Engineering — بناء أنظمة منظمة، قابلة للتوسع، وسهلة التطوير والصيانة",
       },
     ],
   },
@@ -43,15 +43,15 @@ export const learningColumns: LearningColumn[] = [
     items: [
       {
         name: "Computer Science Illuminated",
-        sub: "رحلة شاملة في أساسيات علوم الحاسب — من الدوائر للخوارزميات",
+        sub: "فهم شامل لمفاهيم علوم الحاسب بداية من أساسيات الحوسبة حتى الخوارزميات والأنظمة",
       },
       {
-        name: "Introduction to Mathematical Thinking",
-        sub: "كيف يفكر عقل الرياضياتي؟ منهجية التفكير المنطقي",
+        name: "Software Architecture",
+        sub: "تصميم أنظمة برمجية قوية وقابلة للنمو مع تطور احتياجات المشاريع",
       },
       {
-        name: "Algebra and Trigonometry 2e",
-        sub: "بناء قاعدة رياضية متينة لعلوم البيانات والخوارزميات",
+        name: "كتب ريادة الأعمال والمنتجات الرقمية",
+        sub: "فهم بناء المنتجات، احتياجات العملاء، وتحويل الأفكار إلى حلول قابلة للتطبيق",
       },
     ],
   },
@@ -59,14 +59,14 @@ export const learningColumns: LearningColumn[] = [
     label: "مجالات الاهتمام",
     type: "tags",
     items: [
-      { name: "الرياضيات", tag: true },
-      { name: "الأدب", tag: true },
-      { name: "التاريخ", tag: true },
-      { name: "الفلسفة", tag: true },
-      { name: "علوم الشريعة", tag: true },
+      { name: "هندسة البرمجيات", tag: true },
       { name: "علوم الحاسب", tag: true },
+      { name: "الأنظمة الرقمية", tag: true },
+      { name: "علوم البيانات", tag: true },
+      { name: "الذكاء الاصطناعي", tag: true },
       { name: "ريادة الأعمال", tag: true },
-      { name: "الأنظمة المعقدة", tag: true },
+      { name: "تحليل الأعمال", tag: true },
+      { name: "بناء المنتجات التقنية", tag: true },
     ],
   },
 ];
