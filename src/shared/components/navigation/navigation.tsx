@@ -65,7 +65,7 @@ export function Navigation() {
   alt="Logo"
   width={120}
   height={120}
-  className="rounded-full w-15 h-15 md:w-12 md:h-12 object-contain"
+  className="rounded-full w-15 h-15 md:w-25 md:h-25 object-contain"
 />
 
         {/* Desktop Nav Links */}
