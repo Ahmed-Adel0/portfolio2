@@ -5,6 +5,7 @@ export interface Project {
   code: string;
   name: string;
   businessDescription: string; // Business outcome in Arabic
+  image: string; // Screenshot image path
   link?: string; // Optional live link
 }
 
@@ -13,8 +14,8 @@ export const projectsData: Project[] = [
     id: "medplus",
     code: "MED+",
     name: "MEDCAL+ نظام إدارة العيادات الطبية",
-    businessDescription: "نظام رقمي لإدارة حجوزات العيادات الطبية بشكل كامل، ساعد في تقليل وقت انتظار المرضى وتحسين كفاءة العمل داخل العيادة من خلال تقليل الإجراءات اليدوية وتنظيم تدفق الحجز والاستقبال.",
-
+    businessDescription: "نظام رقمي لإدارة حجوزات العيادات الطبية بشكل كامل، ساعد في تقليل وقت انتظار المرضى وتحسين كفاءة العمل داخل العيادة.",
+    image: "/assets/projects/1.png",
     link: "https://medical-platform-alpha.vercel.app/en"
   },
   
@@ -22,16 +23,16 @@ export const projectsData: Project[] = [
     id: "jatory",
     code: "JATORY",
     name: "منصة Jatory التعليمية",
-    businessDescription: "منصة تعليمية تهدف إلى ربط طلاب الكليات العلمية بالمسارات المهنية المناسبة وسوق العمل، من خلال تحليل الاهتمامات وتوجيه المستخدمين نحو مسارات أكثر توافقًا مع قدراتهم.",
-    
+    businessDescription: "منصة تعليمية تهدف إلى ربط طلاب الكليات العلمية بالمسارات المهنية المناسبة وسوق العمل.",
+    image: "/assets/projects/2.png",
     link: "https://jatory.vercel.app/"
   },
   {
     id: "mortaqa",
     code: "MORTAQA",
     name: "منصة مرتقى التعليمية",
-  businessDescription: "منصة تعليمية تهدف إلى ربط الطلاب بالمعلمين والإدارة داخل بيئة تعليمية رقمية منظمة، من خلال إدارة عملية التعلم وتوجيه المستخدمين لمسارات تعليمية تتناسب مع احتياجاتهم ومستوياتهم، مما يحسن تجربة التعلم ويزيد من التفاعل والاستمرارية في المنصة.",
-
+    businessDescription: "منصة تعليمية تهدف إلى ربط الطلاب بالمعلمين والإدارة داخل بيئة تعليمية رقمية منظمة.",
+    image: "/assets/projects/3.png",
     link: "https://mortaqa-8zh1niqml-ahmed-adels-projects-4130fd31.vercel.app/"
   },
 
@@ -39,7 +40,8 @@ export const projectsData: Project[] = [
     id: "outwin",
     code: "OUTWIN",
     name: "شركة Outwin للحلول الرقمية",
-    businessDescription: "قيادة وتنفيذ مشاريع التحول الرقمي للعملاء من مرحلة تحليل الاحتياج حتى تسليم الحلول التقنية، مع تحسين كفاءة العمليات الداخلية وتقليل الهدر التشغيلي في عدة مشاريع.",
+    businessDescription: "قيادة وتنفيذ مشاريع التحول الرقمي للعملاء من مرحلة تحليل الاحتياج حتى تسليم الحلول التقنية.",
+    image: "/assets/projects/4.png",
     link: "https://outwinads.com/"
     
   },
@@ -48,27 +50,26 @@ export const projectsData: Project[] = [
     id: "eds",
     code: "EDS",
     name: "مبادرة Egypt Data Scholars",
-    businessDescription: "منصة تعليمية وطنية في مجال علوم البيانات والذكاء الاصطناعي، تم تصميمها لدعم الطلاب وتوفير مسار تعلم منظم مع مجتمع نشط للتطبيق والتطوير.",
-    
+    businessDescription: "منصة تعليمية وطنية في مجال علوم البيانات والذكاء الاصطناعي، تم تصميمها لدعم الطلاب وتوفير مسار تعلم منظم.",
+    image: "/assets/projects/5.png",
     link: "https://egyds.com/"
   },
 
- {
-  id: "dental-website",
-  code: "DENTAL",
-  name: "موقع إلكتروني لطبيب أسنان",
-
-  businessDescription: "تصميم وتطوير موقع إلكتروني احترافي لطبيب أسنان بهدف تحسين الظهور الرقمي للعيادة، وبناء حضور موثوق على الإنترنت يساعد المرضى على معرفة الخدمات وحجز المواعيد بسهولة، مع تحسين تجربة التواصل وتقليل الاعتماد على المكالمات اليدوية.",
-
-  link: "https://static-medical.vercel.app/en"
-},
+  {
+    id: "tabeeb",
+    code: "TABEEB",
+    name: "موقع طبيب أسنان",
+    businessDescription: "منصة رقمية متخصصة في تقديم الخدمات الطبية وربط المرضى بالأطباء المتخصصين بشكل سريع وفعال.",
+    image: "/assets/projects/6.png",
+    link: "https://egyds.com/"
+  },
   
   {
     id: "bstance",
     code: "B•STANCE",
     name: "منظومة B•Stance الرياضية",
-    businessDescription: "نظام SaaS لإدارة الأكاديميات الرياضية يشمل إدارة الاشتراكات، متابعة اللاعبين، وتحليل الأداء، بهدف تحسين التشغيل وزيادة كفاءة الإدارة داخل الأكاديميات.",
-    
+    businessDescription: "نظام SaaS لإدارة الأكاديميات الرياضية يشمل إدارة الاشتراكات، متابعة اللاعبين، وتحليل الأداء.",
+    image: "/assets/projects/7.png",
     link: "https://b-stance.com/"
   }
 ];

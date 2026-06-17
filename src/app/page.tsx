@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 import { Navigation } from "@/shared/components/navigation/navigation";
 import { Footer } from "@/shared/components/footer/footer";
-import { HeroSection } from "@/features/hero/components/HeroSection";
-import { WhyMeSection } from "@/features/why-me/components/WhyMeSection";
-import { TestimonialsSection } from "@/features/testimonials/components/TestimonialsSection";
-import { ComparisonSection } from "@/features/comparison/components/ComparisonSection";
-import { ServicesSection } from "@/features/services/components/services-section";
-import { ProjectsSection } from "@/features/projects/components/projects-section";
-import { HowItWorksSection } from "@/features/how-it-works/components/HowItWorksSection";
-import { FaqSection } from "@/features/faq/components/FaqSection";
+import { HeroSection } from "@/features/hero/HeroSection";
+import { WhyMeSection } from "@/features/why-me/WhyMeSection";
+import { TestimonialsSection } from "@/features/testimonials/TestimonialsSection";
+import { ComparisonSection } from "@/features/comparison/ComparisonSection";
+import { ServicesSection } from "@/features/services/services-section";
+import { ProjectsSection } from "@/features/projects/projects-section";
+import { HowItWorksSection } from "@/features/how-it-works/HowItWorksSection";
+import { FaqSection } from "@/features/faq/FaqSection";
 import { testimonialsData } from "@/data/testimonials";
 
 export default function Home() {

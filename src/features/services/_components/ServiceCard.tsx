@@ -1,7 +1,18 @@
-import { services } from "@/data/services";
-import { SectionHeader } from "@/shared/components/section-header";
+import React from "react";
 
-export function ServicesSection() {
+interface ServiceData {
+  num: string;
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface ServiceCardProps {
+  service: ServiceData;
+  index: number;
+}
+
+export function ServiceCard({ service, index }: ServiceCardProps) {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "platform":
@@ -51,31 +62,16 @@ export function ServicesSection() {
   };
 
   return (
-    <section
-      className="px-6 md:px-12 lg:px-24 py-24 border-b border-border bg-bg-2 relative overflow-hidden"
-      id="services"
-      dir="rtl"
+    <div
+      className={`reveal reveal-delay-${(index % 3) + 1} group bg-bg border border-border/80 p-8 sm:p-10 rounded-3xl hover:border-blue/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-md flex flex-col`}
     >
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <SectionHeader num="03" title="كيف يمكنني مساعدتك؟" />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={service.num}
-              className={`reveal reveal-delay-${(index % 3) + 1} group bg-bg border border-border/80 p-8 sm:p-10 rounded-3xl hover:border-blue/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-md flex flex-col`}
-            >
-              <div className="text-blue mb-6 bg-blue/5 border border-blue/10 w-12 h-12 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-blue group-hover:text-white transition-all duration-300">
-                {getIcon(service.icon)}
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-4 text-text">{service.title}</h3>
-              <p className="text-xs sm:text-sm text-muted leading-relaxed mb-6 flex-1">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
+      <div className="text-blue mb-6 bg-blue/5 border border-blue/10 w-12 h-12 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:bg-blue group-hover:text-white transition-all duration-300">
+        {getIcon(service.icon)}
       </div>
-    </section>
+      <h3 className="text-lg sm:text-xl font-bold mb-4 text-text">{service.title}</h3>
+      <p className="text-xs sm:text-sm text-muted leading-relaxed mb-6 flex-1">
+        {service.description}
+      </p>
+    </div>
   );
 }

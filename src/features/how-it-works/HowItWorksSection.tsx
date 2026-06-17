@@ -2,6 +2,7 @@
 
 import { howItWorksData } from "@/data/how-it-works";
 import { SectionHeader } from "@/shared/components/section-header";
+import { StepCard } from "./_components/StepCard";
 
 export function HowItWorksSection() {
   return (
@@ -25,23 +26,13 @@ export function HowItWorksSection() {
           <div className="hidden lg:block absolute top-[48px] left-[5%] right-[5%] h-px bg-gradient-to-l from-border via-border to-transparent z-0 pointer-events-none" />
 
           {howItWorksData.steps.map((step, index) => (
-            <div
+            <StepCard
               key={step.num}
-              className={`reveal reveal-delay-${index + 1} flex flex-col items-start bg-bg border border-border/80 p-8 rounded-3xl relative z-10 shadow-sm hover:border-blue/20 transition-colors duration-300`}
-            >
-              {/* Step Number Badge */}
-              <div className="font-mono text-4xl sm:text-5xl font-black text-blue/15 mb-4 select-none leading-none">
-                {step.num}
-              </div>
-              
-              <h3 className="text-md sm:text-lg font-bold mb-3 text-text">
-                {step.title}
-              </h3>
-              
-              <p className="text-xs sm:text-sm text-muted leading-relaxed">
-                {step.description}
-              </p>
-            </div>
+              num={step.num}
+              title={step.title}
+              description={step.description}
+              index={index}
+            />
           ))}
         </div>
 
