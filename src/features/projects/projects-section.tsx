@@ -57,13 +57,13 @@ function ProjectsCarousel({ projects, direction, playDirection = "forward" }: Pr
 
 export function ProjectsSection() {
   // Split projects into two rows
-  const half = Math.ceil(projectsData.length / 2);
+  const half = Math.ceil(projectsData.length);
   const row1 = projectsData.slice(0, half);
-  const row2 = projectsData.slice(half);
+  // const row2 = projectsData.slice(half);
 
   // Pad the arrays if necessary to ensure loop works smoothly
   const duplicatedRow1 = [...row1, ...row1];
-  const duplicatedRow2 = [...row2, ...row2];
+  // const duplicatedRow2 = [...row2, ...row2];
 
   return (
     <section
@@ -91,9 +91,9 @@ export function ProjectsSection() {
         </div>
 
         {/* Row 2 — opposite direction LTR */}
-        <div className="px-6 md:px-12 lg:px-24 w-full max-w-[1600px] mx-auto">
+        {/* <div className="px-6 md:px-12 lg:px-24 w-full max-w-[1600px] mx-auto">
           <ProjectsCarousel projects={duplicatedRow2} direction="ltr" playDirection="backward" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

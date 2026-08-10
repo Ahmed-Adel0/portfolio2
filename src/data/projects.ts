@@ -10,14 +10,6 @@ export interface Project {
 }
 
 export const projectsData: Project[] = [
-  {
-    id: "medplus",
-    code: "MED+",
-    name: "MEDCAL+ نظام إدارة العيادات الطبية",
-    businessDescription: "نظام رقمي لإدارة حجوزات العيادات الطبية بشكل كامل، ساعد في تقليل وقت انتظار المرضى وتحسين كفاءة العمل داخل العيادة.",
-    image: "/assets/projects/1.png",
-    link: "https://medical-platform-alpha.vercel.app/en"
-  },
   
   {
     id: "jatory",
@@ -49,25 +41,16 @@ export const projectsData: Project[] = [
   {
     id: "eds",
     code: "EDS",
-    name: "مبادرة Egypt Data Scholars",
+    name: "Egypt Data Scholars",
     businessDescription: "منصة تعليمية وطنية في مجال علوم البيانات والذكاء الاصطناعي، تم تصميمها لدعم الطلاب وتوفير مسار تعلم منظم.",
     image: "/assets/projects/5.png",
-    link: "https://egyds.com/"
-  },
-
-  {
-    id: "tabeeb",
-    code: "TABEEB",
-    name: "موقع طبيب أسنان",
-    businessDescription: "منصة رقمية متخصصة في تقديم الخدمات الطبية وربط المرضى بالأطباء المتخصصين بشكل سريع وفعال.",
-    image: "/assets/projects/6.png",
     link: "https://egyds.com/"
   },
   
   {
     id: "bstance",
     code: "B•STANCE",
-    name: "منظومة B•Stance الرياضية",
+    name: "B•Stance",
     businessDescription: "نظام SaaS لإدارة الأكاديميات الرياضية يشمل إدارة الاشتراكات، متابعة اللاعبين، وتحليل الأداء.",
     image: "/assets/projects/7.png",
     link: "https://b-stance.com/"
